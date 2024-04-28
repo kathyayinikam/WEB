@@ -35,8 +35,103 @@
             height: 450px;
             margin-top: 50px;
             margin-left: 50px;
+            width:500px;
+           
+        }
+        .cgpa{
+            border: 7px solid rgb(77, 22, 22);
+            border-radius: 20px;
+            height: 450px;
+            margin-top: 50px;
+            margin-left: 50px;
             width: 500px;
         }
+       
+        @media only screen and (max-width: 600px) {
+            nav a {
+                font-size: 14px;
+            }
+        .collegename{
+            display:block;
+        }
+            .sgpa {
+                padding: 10px;
+                width: 100%;
+                margin-left: 35px;
+            }
+            .cgpa{
+                width: 100%;
+                margin-left: 35px;
+            }
+        
+            h1 {
+                font-size: 25px;
+            }
+        
+            label {
+                font-size: 14px;
+            }
+        
+            input {
+                height: 25px;
+                padding: 3px;
+            }
+        
+            button {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+            .form{
+                display:block;
+            }
+        }
+        
+        @media only screen and (max-width: 400px) {
+           .collegename{
+            width:500px;
+           }
+            nav a {
+                font-size: 12px;
+            }
+        
+            .sgpa {
+                padding: 5px;
+                width: 100%;
+                height: 400px;
+                
+            }
+        .cgpa{
+            padding: 5px;
+                width: 100%;
+                height: 400px;
+        }
+            h1 {
+                font-size: 25px;
+            }
+        
+            label {
+                font-size: 10px;
+
+            }
+        li{
+            font-size: 10px;
+        }
+            input {
+                height: 20px;
+                padding: 2px;
+                width:10px;
+                margin-right:20px;
+                
+            }
+            .form{
+                display:block;
+            }
+            button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+        
         h1 {
             margin-left: 50px;
         }
@@ -85,24 +180,25 @@
             <form id="sgpa_form">
                 <label>ATC(21CS51)</label>
                 <input type="text" id="atc_sgpa" placeholder="Enter your marks"><br>
-                <label>CN(21CS52)</label><input type="text" id="cn_sgpa" placeholder="Enter your marks"><br>
-                <label>DBMS(21CS53)</label><input type="text" id="dbms_sgpa" placeholder="Enter your marks"><br>
-                <label>AIML(21CS54)</label><input type="text" id="aiml_sgpa" placeholder="Enter your marks"><br>
-                <label>RMIPR(21CS55)</label><input type="text" id="rmipr_sgpa" placeholder="Enter your marks"><br>
-                <label>CIV(21CS56)</label><input type="text" id="civ_sgpa" placeholder="Enter your marks">
+                <label>CN(21CS52)</label><input type="text" id="cn_sgpa" placeholder="Enter your marks"style="margin-left:85px" ><br>
+                <label>DBMS(21CS53)</label><input type="text" id="dbms_sgpa" placeholder="Enter your marks"style="margin-left:55px"><br>
+                <label>AIML(21CS54)</label><input type="text" id="aiml_sgpa" placeholder="Enter your marks"style="margin-left:57px"><br>
+                <label>RMIPR(21CS55)</label><input type="text" id="rmipr_sgpa" placeholder="Enter your marks"style="margin-left:45px"><br>
+                <label>CIV(21CS56)</label><input type="text" id="civ_sgpa" placeholder="Enter your marks"style="margin-left:75px">
             </form>
             <div class="result_sgpa"></div>
             <button onclick="calculate_sgpa()">calculate</button>
         </div>
-        <div class="sgpa">
+    
+        <div class="cgpa">
             <h1>CALCULATE CGPA</h1>
             <form id="cgpa_form">
                 <label>1st sem SGPA</label>
-                <input type="text" id="1st" placeholder="Enter your SGPA"><br>
-                <label>2nd sem SGPA</label><input type="text" id="2nd" placeholder="Enter your SGPA"><br>
-                <label>3rd sem SGPA</label><input type="text" id="3rd" placeholder="Enter your SGPA"><br>
-                <label>4th sem SGPA</label><input type="text" id="4th" placeholder="Enter your SGPA"><br>
-                <label>5th sem SGPA</label><input type="text" id="5th" placeholder="Enter your SGPA"><br>
+                <input type="text" id="1st" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+                <label>2nd sem SGPA</label><input type="text" id="2nd" placeholder="Enter your SGPA" style="margin-left:52px"><br>
+                <label>3rd sem SGPA</label><input type="text" id="3rd" placeholder="Enter your SGPA"style="margin-left:54px"><br>
+                <label>4th sem SGPA</label><input type="text" id="4th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+                <label>5th sem SGPA</label><input type="text" id="5th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
             </form>
             <div id="result_cgpa"></div>
             <button onclick="calculate_cgpa()">calculate</button>
