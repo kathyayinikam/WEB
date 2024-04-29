@@ -213,8 +213,8 @@
     <section class="collegename">
         <nav id="pages">
             <ul>
-                <li><a href="4thsem.html">4th SEM</a></li>
-                <!--<li><a href="5thsem.html">5th SEM</a></li>
+                <li><a href="5thsem.html">5th SEM</a></li>
+               <!---- <li><a href="5thsem.html">5th SEM</a></li>
                 <li><a href="6thsem.html">6th SEM</a></li>
                 <li><a href="7thsem.html">7th SEM</a></li>
                 <li><a href="8thsem.html">8th SEM</a></li>-->
@@ -232,7 +232,8 @@
                 <label>DBMS(21CS53)</label><input type="text" id="dbms_sgpa" placeholder="Enter your marks"style="margin-left:55px"><br>
                 <label>AIML(21CS54)</label><input type="text" id="aiml_sgpa" placeholder="Enter your marks"style="margin-left:57px"><br>
                 <label>RMIPR(21CS55)</label><input type="text" id="rmipr_sgpa" placeholder="Enter your marks"style="margin-left:45px"><br>
-                <label>CIV(21CS56)</label><input type="text" id="civ_sgpa" placeholder="Enter your marks"style="margin-left:75px">
+                <label>CIV(21CS56)</label><input type="text" id="civ_sgpa" placeholder="Enter your marks"style="margin-left:75px"><br>
+                <label>C#(21CSL582)</label><input type="text" id="cs_sgpa" placeholder="Enter your marks"style="margin-left:63px">
             </form>
             <div class="result_sgpa"></div>
             <button onclick="calculate_sgpa()">calculate</button>
@@ -261,8 +262,8 @@
             const aiml = parseFloat(document.getElementById("aiml_sgpa").value);
             const rmipr = parseFloat(document.getElementById("rmipr_sgpa").value);
             const civ = parseFloat(document.getElementById("civ_sgpa").value);
-
-            let point1, point2, point3, point4, point5, point6;
+            const cs = parseFloat(document.getElementById("cs_sgpa").value);
+            let point1, point2, point3, point4, point5, point6,point7;
 
             if (atc == 100) {
                 point1 = 30;
@@ -294,8 +295,12 @@
             } else {
                 point6 = (Math.trunc(civ / 10) + 1) * 1;
             }
-
-            const sgpa = ((point1 + point2 + point3 + point4 + point5 + point6) / 17).toFixed(2);
+            if (cs == 100) {
+                point7 = 10;
+            } else {
+                point7 = (Math.trunc(civ / 10) + 1) * 1;
+            }
+            const sgpa = ((point1 + point2 + point3 + point4 + point5 + point6+point7) / 18).toFixed(2);
             const result = document.querySelector(".result_sgpa");
             result.innerHTML = `<h1>Your SGPA = ${sgpa}</h1>`;
         }
