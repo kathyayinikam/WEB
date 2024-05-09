@@ -308,7 +308,7 @@
             } else {
                 point7 = (Math.trunc(civ / 10) + 1) * 1;
             }
-            const sgpa = ((point1 + point2 + point3 + point4 + point5 + point6+point7+point8) / 18).toFixed(2);
+            const sgpa = ((point1 + point2 + point3 + point4 + point5 + point6+point7+point8) / 18).toFixed(3);
             const result = document.querySelector(".result_sgpa");
             result.innerHTML = `<h1>Your SGPA = ${sgpa}</h1>`;
         }
