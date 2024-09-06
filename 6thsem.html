@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0;
+            background-color: bisque;
+            align-items: center;
+            justify-content: center;
+        }
+        .collegename, a, nav, ul {
+            background-color: rgb(47, 57, 79);
+            color: white;
+            display: flex;
+        }
+        li {
+            list-style-type: none;
+            display: flex;
+            font-size: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 25px;
+        }
+        .form {
+            display: flex;
+            margin-left: 300px;
+        }
+        .sgpa {
+            border: 7px solid rgb(77, 22, 22);
+            border-radius: 20px;
+            height: 100%;
+            margin-top: 25px;
+           
+            width:500px;
+           background-color:bisque ;
+          color: rgb(77, 22, 22);
+        }
+        .cgpa{
+            border: 7px solid rgb(77, 22, 22);
+            border-radius: 20px;
+            height: 500px;
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 500px;
+            background-color:bisque ;
+           color: rgb(77, 22, 22);
+        }
+        input {
+            height: 20px;
+            padding: 2px;
+            width:10px;
+            margin-right:20px;
+            background-color: white;
+           
+            border-radius: 2px;
+        }
+        @media only screen and (max-width: 600px) {
+            .collegename{
+                width:800px;
+               }
+                nav a {
+                    font-size: 12px;
+                }
+            
+                .sgpa {
+                    padding: 5px;
+                    width: 550px;
+                    height: 100%;
+                    margin-left:-200px ;
+                }
+            .cgpa{
+                padding: 5px;
+                    width: 550px;
+                    height: 100%;
+                    margin-left:-200px ;
+            }
+                h1 {
+                    font-size: 25px;
+                }
+            
+                label {
+                    font-size: 10px;
+    
+                }
+            li{
+                font-size: 10px;
+            }
+                input {
+                    height: 20px;
+                    padding: 2px;
+                    width:10px;
+                    margin-right:20px;
+                    
+                }
+                .form{
+                    display:block;
+                }
+                button {
+                    font-size: 14px;
+                    padding: 6px 12px;
+                }
+            }
+            
+            h1 {
+                margin-left: 50px;
+            }
+            button {
+                background-color: rgb(77, 22, 22);
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 7px;
+                padding: 10px;
+                margin-top: 20px;
+                margin-left: 50px;
+            }
+            label {
+                width: 100px;
+                align-items: left;
+                font-size: 20px;
+                font-weight: 800;
+                margin-left: 50px;
+            }
+            input {
+                height: 30px;
+                margin-top: 5px;
+                margin-left: 70px;
+                width: 100px;
+                border-radius: 5px;
+            }
+        
+        
+        @media only screen and (max-width: 400px) {
+           .collegename{
+            width:800px;
+           }
+            nav a {
+                font-size: 12px;
+            }
+        
+            .sgpa {
+                padding: 5px;
+                width: 550px;
+                height: 100%;
+                margin-left:-200px ;
+            }
+        .cgpa{
+            padding: 5px;
+                width: 550px;
+                height: 100%;
+                margin-left:-200px ;
+        }
+            h1 {
+                font-size: 25px;
+            }
+        
+            label {
+                font-size: 10px;
+
+            }
+        li{
+            font-size: 10px;
+        }
+            input {
+                height: 20px;
+                padding: 2px;
+                width:10px;
+                margin-right:20px;
+                
+            }
+            .form{
+                display:block;
+            }
+            button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+        
+        h1 {
+            margin-left: 50px;
+        }
+        button {
+            background-color: rgb(77, 22, 22);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 7px;
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        label {
+            width: 100px;
+            align-items: left;
+            font-size: 20px;
+            font-weight: 800;
+            margin-left: 50px;
+        }
+        input {
+            height: 30px;
+            margin-top: 5px;
+            margin-left: 70px;
+            width: 100px;
+            border-radius: 5px;
+        }
+        @media only screen and (max-width: 360px){
+            .collegename{
+                width:800px;
+               }
+                nav a {
+                    font-size: 12px;
+                }
+            
+                .sgpa {
+                    padding: 5px;
+                    width: 550px;
+                    height: 100%;
+                    margin-left:-200px;
+                }
+            .cgpa{
+                padding: 5px;
+                    width: 550px;
+                    height: 100%;
+                    margin-left:-200px;
+            }
+                h1 {
+                    font-size: 25px;
+                }
+            
+                label {
+                    font-size: 10px;
+    
+                }
+            li{
+                font-size: 10px;
+            }
+                input {
+                    height: 20px;
+                    padding: 2px;
+                    width:10px;
+                    margin-right:20px;
+                    
+                }
+                .form{
+                    display:block;
+                }
+                button {
+                    font-size: 14px;
+                    padding: 6px 12px;
+                }
+            }
+            
+            h1 {
+                margin-left: 50px;
+            }
+            button {
+                background-color: rgb(77, 22, 22);
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 7px;
+                padding: 10px;
+                margin-top: 20px;
+                margin-left: 50px;
+            }
+            label {
+                width: 100px;
+                align-items: left;
+                font-size: 20px;
+                font-weight: 800;
+                margin-left: 50px;
+            }
+            input {
+                height: 30px;
+                margin-top: 5px;
+                margin-left: 70px;
+                width: 100px;
+                border-radius: 5px;
+            }
+    </style>
+</head>
+<body>
+    <div class="mina">
+    <section class="collegename">
+        <nav id="pages">
+           
+            <ul>
+                <p style="color:rgb(47, 57, 79)">jai ganesh</p>
+                <li><a href="1stsem.html">1st SEM</a></li>
+                <li><a href="2ndsem.html">2nd SEM</a></li>
+                <li><a href="3rdsem.html">3rd SEM</a></li>
+                <li><a href="4thsem.html">4th SEM</a></li>
+                <li><a href="index.html">5th SEM</a></li>
+                <li><a href="6thsem.html">6th SEM</a></li>
+                
+            </ul>
+        </nav>
+    </section>
+    
+    <section class="form">
+        <div class="sgpa">
+            <h1>CALCULATE SGPA</h1>
+            <form id="sgpa_form">
+                <label>SOFTWARE(21CS61)</label>
+                <input type="text" id="in1" placeholder="Enter your marks" ><br>
+                <label>OE(21ME652)</label>
+                <input type="text" id="in2" placeholder="Enter your marks" style="margin-left:125px"><br>
+                <label>FSD(21CS62)</label><input type="text" id="in3" placeholder="Enter your marks"style="margin-left:146px" ><br>
+                <label>CG(21CS63)</label><input type="text" id="in4" placeholder="Enter your marks"style="margin-left:155px"><br>
+                <label>DSV(21CS644)</label><input type="text" id="in5" placeholder="Enter your marks"style="margin-left:160px"><br>
+                <label>CG LAB(21CSL66)</label><input type="text" id="in6" placeholder="Enter your marks"style="margin-left:90px"><br>
+                <label>MINI PROJECT(21CSMP67)</label><input type="text" id="in7" placeholder="Enter your marks"style="margin-left:41px"><br>
+                <label>INTERNSHIP(21INT68)</label>
+                <input type="text" id="in8" placeholder="Enter your marks" style="margin-left:62px"><br>
+                
+            </form>
+            <div id="result_sgpa"></div>
+            <button onclick="calculate_sgpa()">calculate</button>
+            <h1></h1>
+        </div>
+    
+        <div class="cgpa">
+            <h1>CALCULATE CGPA</h1>
+            <form id="cgpa_form">
+                <label>1st sem SGPA</label>
+                <input type="text" id="1st" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+                <label>2nd sem SGPA</label><input type="text" id="2nd" placeholder="Enter your SGPA" style="margin-left:52px"><br>
+                <label>3rd sem SGPA</label><input type="text" id="3rd" placeholder="Enter your SGPA"style="margin-left:54px"><br>
+                <label>4th sem SGPA</label><input type="text" id="4th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+                <label>5th sem SGPA</label><input type="text" id="5th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+                <label>6th sem SGPA</label><input type="text" id="6th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+               
+            </form>
+            <div id="result_cgpa"></div>
+            <button onclick="calculate_cgpa()">calculate</button>
+            <h1></h1>
+        </div>
+    </section>
+</div>
+    <script>
+        function calculate_cgpa() {
+            const sem1 = parseFloat(document.getElementById("1st").value);
+            const sem2 = parseFloat(document.getElementById("2nd").value);
+            const sem3 = parseFloat(document.getElementById("3rd").value);
+            const sem4 = parseFloat(document.getElementById("4th").value);
+            const sem5 = parseFloat(document.getElementById("5th").value);
+            const sem6 = parseFloat(document.getElementById("6th").value);
+            
+            const cgpa=((sem1+sem2+sem3+sem4+sem5+sem6)/6).toFixed(2);
+            const result2=document.getElementById("result_cgpa");
+            result2.innerHTML = `<h1>Your CGPA = ${cgpa}</h1>`;
+
+        }
+        function calculate_sgpa() {
+
+            const so = parseFloat(document.getElementById("in1").value);
+            const oe = parseFloat(document.getElementById("in2").value);
+            const fsd = parseFloat(document.getElementById("in3").value);
+            const cg = parseFloat(document.getElementById("in4").value);
+            const ds = parseFloat(document.getElementById("in5").value);
+            const cgl = parseFloat(document.getElementById("in6").value);
+            const mini = parseFloat(document.getElementById("in7").value);
+            const int = parseFloat(document.getElementById("in8").value);
+           
+
+            let point1, point2, point3, point4, point5, point6, point7, point8;
+
+            if (so == 100) {
+                point1 = 30;
+            } else {
+                point1 = (Math.trunc(so / 10) + 1) * 3;
+            }
+            if (oe == 100) {
+                point2 = 30;
+            } else {
+                point2 = (Math.trunc(oe / 10) + 1) * 3;
+            }
+            if (fsd == 100) {
+                point3 = 40;
+            } else {
+                point3 = (Math.trunc(fsd / 10 )+ 1) * 4;
+            }
+            if (cg == 100) {
+                point4 = 30;
+            } else {
+                point4 = (Math.trunc(cg / 10) + 1) * 3;
+            }
+            if (ds == 100) {
+                point5 = 30;
+            } else {
+                point5 =( Math.trunc(ds / 10) + 1) * 3;
+            }
+            if (cgl == 100) {
+                point6 = 10;
+            } else {
+                point6 = (Math.trunc(cgl / 10) + 1) * 1;
+            }
+            if (mini == 100) {
+                point7 = 20;
+            } else {
+                point7 = (Math.trunc(mini / 10) + 1) * 2;
+            }
+            if (int == 100) {
+                point8 = 30;
+            } else {
+                point8 = (Math.trunc(int / 10) + 1) * 3;
+            }
+            
+            const sgpa = ((point1 + point2 + point3 + point4 + point5 + point6+point7+point8) / 22).toFixed(2);
+            const result = document.getElementById("result_sgpa");
+            result.innerHTML = `<h1>Your SGPA = ${sgpa}</h1>`;
+        }
+        
+    </script>
+</body>
+</html>
