@@ -287,36 +287,38 @@
     </style>
 </head>
 <body>
+    <div class="mina">
     <section class="collegename">
         <nav id="pages">
+           
             <ul>
+                <p style="color:rgb(47, 57, 79)">jai ganesh</p>
                 <li><a href="1stsem.html">1st SEM</a></li>
                 <li><a href="2ndsem.html">2nd SEM</a></li>
                 <li><a href="3rdsem.html">3rd SEM</a></li>
                 <li><a href="4thsem.html">4th SEM</a></li>
                 <li><a href="index.html">5th SEM</a></li>
                 <li><a href="6thsem.html">6th SEM</a></li>
+                <li><a href="7thsem.html">7th SEM</a></li>
                 
             </ul>
         </nav>
     </section>
-    <h4 style="color:bisque">jai ganesh</h4>
+    
     <section class="form">
         <div class="sgpa">
             <h1>CALCULATE SGPA</h1>
             <form id="sgpa_form">
-                <label>MATHS(21MAT21)</label>
-                <input type="text" id="mat" placeholder="Enter your marks" style="margin-left:100px"><br>
-                <label>CHEMISTRY(21CHE22)</label><input type="text" id="phy" placeholder="Enter your marks" style="margin-left:55px"><br>
-                <label>PSP(21PSP23)</label><input type="text" id="ec" placeholder="Enter your marks"style="margin-left:150px"><br>
-                <label>ELECTRONICS(21ELN14)</label><input type="text" id="cv" placeholder="Enter your marks"style="margin-left:35px"><br>
-                <label>MECHANICAL(21EME25)</label><input type="text" id="cd" placeholder="Enter your marks"style="margin-left:35px"><br>
-                <label>CHEMLAB(21CHEL26)</label><input type="text" id="pl" placeholder="Enter your marks" style="margin-left:59px"><br>
-                <label>CP LAB(21CPL27)</label><input type="text" id="el" placeholder="Enter your marks"style="margin-left:110px"><br>
-                <label>ENGLISH(21EGH28)</label><input type="text" id="eng" placeholder="Enter your marks"style="margin-left:85px"><br>
-                <label>SFH(21SFH29)</label><input type="text" id="idt" placeholder="Enter your marks"style="margin-left:142px">
-              </form>
-            <div class="result_sgpa"></div>
+                 <label>21CS71</label>
+                <input type="text" id="in1" placeholder="Enter your marks" style="margin-left:200px"><br>
+                <label>21ME751/21EC755</label>
+                <input type="text" id="in2" placeholder="Enter your marks" style="margin-left:100px"><br>
+                <label>21CS72</label><input type="text" id="in3" placeholder="Enter your marks"style="margin-left:204px" ><br>
+                <label>21CS745/21CS744</label><input type="text" id="in4" placeholder="Enter your marks"style="margin-left:112px"><br>
+                <label>21CS735</label><input type="text" id="in5" placeholder="Enter your marks"style="margin-left:192px"><br>
+                <label>21CSP76</label><input type="text" id="in6" placeholder="Enter your marks"style="margin-left:190px"><br>
+            </form>
+            <div id="result_sgpa"></div>
             <button onclick="calculate_sgpa()">calculate</button>
             <h1></h1>
         </div>
@@ -324,94 +326,83 @@
         <div class="cgpa">
             <h1>CALCULATE CGPA</h1>
             <form id="cgpa_form">
-                <label>1st sem SGPA</label>
+               <label>1st sem SGPA</label>
                 <input type="text" id="1st" placeholder="Enter your SGPA"style="margin-left:55px"><br>
-                <label>2nd sem SGPA</label><input type="text" id="2nd" placeholder="Enter your SGPA"style="margin-left:50px"><br>
-                
-               
+                <label>2nd sem SGPA</label><input type="text" id="2nd" placeholder="Enter your SGPA" style="margin-left:52px"><br>
+                <label>3rd sem SGPA</label><input type="text" id="3rd" placeholder="Enter your SGPA"style="margin-left:54px"><br>
+                <label>4th sem SGPA</label><input type="text" id="4th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+                <label>5th sem SGPA</label><input type="text" id="5th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+                <label>6th sem SGPA</label><input type="text" id="6th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
+                <label>7th sem SGPA</label><input type="text" id="7th" placeholder="Enter your SGPA"style="margin-left:55px"><br>
             </form>
             <div id="result_cgpa"></div>
             <button onclick="calculate_cgpa()">calculate</button>
+            <h1></h1>
         </div>
     </section>
+</div>
     <script>
         function calculate_cgpa() {
             const sem1 = parseFloat(document.getElementById("1st").value);
             const sem2 = parseFloat(document.getElementById("2nd").value);
+            const sem3 = parseFloat(document.getElementById("3rd").value);
+            const sem4 = parseFloat(document.getElementById("4th").value);
+            const sem5 = parseFloat(document.getElementById("5th").value);
+            const sem6 = parseFloat(document.getElementById("6th").value);
+            const sem7 = parseFloat(document.getElementById("7th").value);
             
-           
-            
-            const cgpa=((sem1+sem2)/2).toFixed(2);
+            const cgpa=((sem1+sem2+sem3+sem4+sem5+sem6)/6).toFixed(2);
             const result2=document.getElementById("result_cgpa");
             result2.innerHTML = `<h1>Your CGPA = ${cgpa}</h1>`;
 
         }
         function calculate_sgpa() {
 
-            const mat = parseFloat(document.getElementById("mat").value);
-            const phy = parseFloat(document.getElementById("phy").value);
-            const ec = parseFloat(document.getElementById("ec").value);
-            const cv = parseFloat(document.getElementById("cv").value);
-            const cd = parseFloat(document.getElementById("cd").value);
-            const pl = parseFloat(document.getElementById("pl").value);
-            const el = parseFloat(document.getElementById("el").value);
-            const eng = parseFloat(document.getElementById("eng").value);
-            const idt = parseFloat(document.getElementById("idt").value);
+            const bda = parseFloat(document.getElementById("in1").value) || 0;
+    const me = parseFloat(document.getElementById("in2").value) || 0;
+    const cc = parseFloat(document.getElementById("in3").value) || 0;
+    const no = parseFloat(document.getElementById("in4").value) || 0;
+    const iot = parseFloat(document.getElementById("in5").value) || 0;
+    const pw = parseFloat(document.getElementById("in6").value) || 0;
            
-
+           
 
             let point1, point2, point3, point4, point5, point6;
 
-            if (mat == 100) {
+            if (bda == 100) {
                 point1 = 30;
             } else {
-                point1 = (Math.trunc(mat / 10) + 1) * 3;
+                point1 = (Math.trunc(bda / 10) + 1) * 3;
             }
-            if (phy == 100) {
+            if (me == 100) {
                 point2 = 30;
             } else {
-                point2 = (Math.trunc(phy / 10) + 1) * 3;
+                point2 = (Math.trunc(me / 10) + 1) * 3;
             }
-            if (ec == 100) {
-                point3 = 30;
+            if (cc == 100) {
+                point3 = 20;
             } else {
-                point3 = (Math.trunc(ec / 10 )+ 1) * 3;
+                point3 = (Math.trunc(cc / 10 )+ 1) * 2;
             }
-            if (cv == 100) {
+            if (no == 100) {
                 point4 = 30;
             } else {
-                point4 = (Math.trunc(cv / 10) + 1) * 3;
+                point4 = (Math.trunc(no / 10) + 1) * 3;
             }
-            if (cd == 100) {
+            if (iot == 100) {
                 point5 = 30;
             } else {
-                point5 =( Math.trunc(cd / 10) + 1) * 3;
+                point5 =( Math.trunc(iot / 10) + 1) * 3;
             }
-            if (pl == 100) {
-                point6 = 10;
+            if (pw == 200) {
+                point6 = 100;
             } else {
-                point6 = (Math.trunc(pl / 10) + 1) * 1;
-            }
-            if (el == 100) {
-                point7 = 10;
-            } else {
-                point7 = (Math.trunc(el / 10) + 1) * 1;
-            }
-            if (eng == 100) {
-                point8 = 20;
-            } else {
-                point8 = (Math.trunc(eng / 10) + 1) * 2;
-            }
-            if (idt == 100) {
-                point9 = 10;
-            } else {
-                point9 = (Math.trunc(idt / 10) + 1) * 1;
+                point6 = (Math.trunc(pw / 20) + 1) * 10;
             }
             
             
-            
-            const sgpa = ((point1 + point2 + point3 + point4 + point5 + point6+point7+point8+point9) / 20).toFixed(2);
-            const result = document.querySelector(".result_sgpa");
+            const sgpa = ((point1 + point2 + point3 + point4 + point5 + point6) / 24).toFixed(2);
+            const result = document.getElementById("result_sgpa");
             result.innerHTML = `<h1>Your SGPA = ${sgpa}</h1>`;
         }
         
