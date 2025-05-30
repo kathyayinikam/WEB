@@ -358,8 +358,8 @@
         }
         function calculate_sgpa() {
 
-            const bda = parseFloat(document.getElementById("in1").value) || 0;
-    const me = parseFloat(document.getElementById("in2").value) || 0;
+            const bda = parseFloat(document.getElementById("in2").value) || 0;
+    const me = parseFloat(document.getElementById("in1").value) || 0;
    
            
            
@@ -378,7 +378,7 @@
             }
             
             
-            const sgpa = ((point1 + point2) / 17).toFixed(2);
+            const sgpa = ((point1 + point2) / 16).toFixed(2);
             const result = document.getElementById("result_sgpa");
             result.innerHTML = `<h1>Your SGPA = ${sgpa}</h1>`;
         }
