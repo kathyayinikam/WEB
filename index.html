@@ -369,13 +369,15 @@
 
             if (bda == 200) {
                 point1 = 150;
-            } else {
-                point1 = (Math.trunc(bda / 20) + 1) * 15;
+            } 
+            else if(bda > 100){
+                temp=bda-100;
+                point1=(Math.trunc( temp/ 10)+1) * 15;
             }
             if (me == 100) {
                 point2 = 10;
             } else {
-                point2 = (Math.trunc(me / 10) + 1) * 1;
+                point2 = (Math.trunc(me / 10)+1) * 1;
             }
             
             
